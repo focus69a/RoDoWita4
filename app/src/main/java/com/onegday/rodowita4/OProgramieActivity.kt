@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_o_programie.*
 
 class OProgramieActivity : Fragment() {
     //private val myUrl = "https://flaskwj1.eu-gb.mybluemix.net/"
-    val myUrl ="http://forum.nikoniarze.pl/threads/290931-Nikon-Z6-i-Z7-oficjalnie"
+    val myUrl ="https://flaskwj1.eu-gb.mybluemix.net"
     lateinit var view12: View
     lateinit var myWebView : WebView
 
@@ -56,7 +56,7 @@ class OProgramieActivity : Fragment() {
 
         //myWebView.setLayerType(View.LAYER_TYPE_HARDWARE,null)  //akceleracja sprzetowa >19
 
-        //myWebView.setInitialScale(100)
+        myWebView.setInitialScale(100)
 
 
         myWebView.webViewClient = object : WebViewClient() {
