@@ -15,7 +15,8 @@ import kotlinx.android.synthetic.main.fragment_o_programie.*
 
 
 class OProgramieActivity : Fragment() {
-    private val myUrl = "https://flaskwj1.eu-gb.mybluemix.net/"
+    //private val myUrl = "https://flaskwj1.eu-gb.mybluemix.net/"
+    val myUrl ="http://forum.nikoniarze.pl/threads/290931-Nikon-Z6-i-Z7-oficjalnie"
     lateinit var view12: View
     lateinit var myWebView : WebView
 
@@ -31,7 +32,7 @@ class OProgramieActivity : Fragment() {
         //val settings = webViewID1.settings
         //val settings = webViewID1.settings
 
-        view12 = inflater.inflate(R.layout.fragment_o_programie, container, false)
+        view12 = inflater!!.inflate(R.layout.fragment_o_programie, container, false)
 
         myWebView = view12.findViewById(R.id.webViewID1)
 
@@ -55,6 +56,7 @@ class OProgramieActivity : Fragment() {
 
         //myWebView.setLayerType(View.LAYER_TYPE_HARDWARE,null)  //akceleracja sprzetowa >19
 
+        //myWebView.setInitialScale(100)
 
 
         myWebView.webViewClient = object : WebViewClient() {
