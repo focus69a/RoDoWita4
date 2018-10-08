@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_o_programie.*
 
 class OProgramieActivity : Fragment() {
     //private val myUrl = "https://flaskwj1.eu-gb.mybluemix.net/"
-    val myUrl ="https://flaskwj1.eu-gb.mybluemix.net"
+    val myUrl ="https://flaskwj1.eu-gb.mybluemix.net/"
     lateinit var view12: View
     lateinit var myWebView : WebView
 
@@ -42,21 +42,21 @@ class OProgramieActivity : Fragment() {
         //settings.cacheMode = WebSettings.LOAD_DEFAULT
         //settings.setAppCachePath(cacheDir.path)
 
-        //settings.setSupportZoom(true)
-        //settings.builtInZoomControls = true
-        //settings.displayZoomControls = true
+        myWebView.settings.setSupportZoom(true)
+        myWebView.settings.builtInZoomControls = true
+        myWebView.settings.displayZoomControls = true
 
-        //settings.textZoom = 125
+        myWebView.settings.textZoom = 150
 
         //settings.blockNetworkImage = false
-        //settings.loadsImagesAutomatically = true
-        //settings.loadWithOverviewMode = true
+        myWebView.settings.loadsImagesAutomatically = true
+        myWebView.settings.loadWithOverviewMode = true
         //settings.javaScriptCanOpenWindowsAutomatically = true
         //settings.mediaPlaybackRequiresUserGesture = false
 
-        //myWebView.setLayerType(View.LAYER_TYPE_HARDWARE,null)  //akceleracja sprzetowa >19
+        myWebView.setLayerType(View.LAYER_TYPE_HARDWARE,null)  //akceleracja sprzetowa >19
 
-        myWebView.setInitialScale(100)
+        //myWebView.setInitialScale(100)
 
 
         myWebView.webViewClient = object : WebViewClient() {
