@@ -1,6 +1,7 @@
 package com.onegday.rodowita4
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -8,7 +9,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import kotlinx.android.synthetic.main.ja_upowaznilem_item.view.*
+import kotlinx.android.synthetic.main.mnie_upowazniono_item.view.*
 
 
 class JaUpowaznilemActivity : Fragment() {
@@ -72,6 +75,9 @@ class AdapterJaUpowaznilem(val upowaznienia: List<Ja_Upowaznilem_Dane>, val cont
 
 //        holder.itemView.textView_NazwaWlasnaID?.text = nazwyWlasne[position]
 //        holder.itemView.textViewOdID?.text = odKogo[position]
+//to dodaje 20181025
+
+
 
     }
 
@@ -95,6 +101,19 @@ class AdapterJaUpowaznilem(val upowaznienia: List<Ja_Upowaznilem_Dane>, val cont
         // var checkBoxFilm: CheckBox? = itemView.findViewById(R.id.checkMovieID)
         // var checkBoxDoc: CheckBox? = itemView.findViewById(R.id.checkDocID)
 
-        init { }
+        init {
+            itemView.setOnClickListener {
+                //println("TEST")
+                //Toast.makeText(itemView.context, " nowy intent", Toast.LENGTH_LONG).show()
+                val intent = Intent(itemView.context, KartaUpoznieniaActivity::class.java)
+                intent.putExtra("dlaKogo", dlaKogo.text)
+                intent.putExtra("odKogo", "aaa")
+                intent.putExtra("zakres", zakres.text)
+                intent.putExtra("firma", firma.text)
+                intent.putExtra("okres", okres.text)
+                itemView.context.startActivity(intent)
+
+            }
+        }
     }
 }
