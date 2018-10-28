@@ -2,6 +2,7 @@ package com.onegday.rodowita4
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -158,7 +159,20 @@ class AdapterJestemUpowazniony(val homeFeed: HomeFeed, val context: Context?) : 
         // var checkBoxFilm: CheckBox? = itemView.findViewById(R.id.checkMovieID)
         // var checkBoxDoc: CheckBox? = itemView.findViewById(R.id.checkDocID)
 
-        init { }
+        init {
+            itemView.setOnClickListener {
+                //println("TEST")
+                //Toast.makeText(itemView.context, " nowy intent", Toast.LENGTH_LONG).show()
+                val intent = Intent(itemView.context, KartaUpoznieniaActivity::class.java)
+                intent.putExtra("dlaKogo", "aaa")
+                intent.putExtra("odKogo", odKogo.text)
+                intent.putExtra("zakres", zakres.text)
+                intent.putExtra("firma", firma.text)
+                intent.putExtra("okres", okres.text)
+                itemView.context.startActivity(intent)
+
+            }
+        }
     }
 }
 

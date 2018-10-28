@@ -78,7 +78,6 @@ class AdapterJaUpowaznilem(val upowaznienia: List<Ja_Upowaznilem_Dane>, val cont
 //to dodaje 20181025
 
 
-
     }
 
 
@@ -115,5 +114,7 @@ class AdapterJaUpowaznilem(val upowaznienia: List<Ja_Upowaznilem_Dane>, val cont
 
             }
         }
+
     }
+
 }

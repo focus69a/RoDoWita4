@@ -25,6 +25,14 @@
             android:gravity="end"
             android:text="Dla : "
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="end"
+            android:text="Od : "
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -65,6 +73,13 @@
             android:layout_marginTop="8dp"
             android:text=". . . ."
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView_OdID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=". . . ."
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView_OkresID"
@@ -95,7 +110,7 @@
 </LinearLayout>
 
     <Button
-        android:id="@+id/button_SkasujID"
+        android:id="@+id/button_UdostepnijID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -105,7 +120,7 @@
         android:text="Udostepnij" />
 
     <Button
-        android:id="@+id/button_UdostepnijID"
+        android:id="@+id/button_SkasujID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
